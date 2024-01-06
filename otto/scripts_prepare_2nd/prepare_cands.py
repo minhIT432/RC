@@ -302,9 +302,9 @@ if __name__ == '__main__':
     run_version = sys.argv[1]  # A variable that determines which strategy to use to create a candidate
 
     class CFG:
-        train_path = "../inputs/train_valid/train_parquet"
-        val_path = "../inputs/train_valid/test_parquet"
-        val_label_path = "../inputs/train_valid/test_labels.parquet"
+        train_path = "/kaggle/input/otto-validation/train_parquet"
+        val_path = "/kaggle/input/otto-validation/test_parquet"
+        val_label_path = "/kaggle/input/otto-validation/test_labels.parquet"
         cands_path = f"../inputs/candidates/cands/{run_version}/"
 
     path = CFG.val_path

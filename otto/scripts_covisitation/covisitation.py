@@ -106,5 +106,5 @@ for aid_key, g in tqdm(count_df.groupby("aid_key"), total=len(count_df["aid_key"
     # Only save aids with the topk scores
     g = g.sort(by="score", reverse=True)[:topk]
     count_info_list[aid_key] = [g["aid_future"].to_list(), g["score"].to_list()]
-os.system("mkdir /kaggle/working/inputs/comatrix")
-pd.to_pickle(count_info_list, f"/kaggle/working/inputs/comatrix/count_dic_{version}_all.pkl")
+os.system("mkdir ../inputs/comatrix")
+pd.to_pickle(count_info_list, f"../inputs/comatrix/count_dic_{version}_all.pkl")

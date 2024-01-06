@@ -10,8 +10,8 @@ import polars as pl
 
 version = __file__.split("_")[-1].split(".")[0]
 class CFG:
-    train_path = "../inputs/train_valid/train_parquet"
-    val_path = "../inputs/train_valid/test_parquet"
+    train_path = "/kaggle/input/otto-validation/train_parquet"
+    val_path = "./kaggle/input/otto-validation/test_parquet"
     output_path = "../inputs/emb_models/"
     output_fn = f"aid_h_emb_{version}.pkl"
     output_model_fn = f"model_emb_{version}.pkl"
